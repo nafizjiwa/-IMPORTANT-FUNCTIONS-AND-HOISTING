@@ -18,11 +18,6 @@ function sayHello() {
 **Mental model:**  
 > JS lifts the whole function to the top.
 
-**Use when:**  
-- You want flexible ordering  
-- Teaching beginners  
-- Writing utility functions
-
 ---
 
 ### 🟢 **2. Function Expressions — NOT Hoisted**
@@ -40,7 +35,6 @@ const sayHello = function () {
 > JS lifts the *variable*, but it’s still empty until assignment.
 
 **Use when:**  
-- You want predictable, strict ordering  
 - You want block‑scoped behavior
 
 ---
@@ -60,7 +54,7 @@ const sayHello = () => {
 > Arrow functions are just function expressions with nicer syntax.
 
 **Common beginner trap:**  
-Using the function before it’s defined.
+DON'T USE THE FUNCTION BEFORE IT IS DEFINED.
 
 ---
 
@@ -78,20 +72,6 @@ class User {}
 
 ---
 
-### 🔴 **5. `var` — Hoisted but Dangerous**
-`var` is hoisted **and initialized to `undefined`**, causing weird behavior.
-
-```js
-console.log(name); // undefined (not an error!)
-var name = "Nafiz";
-```
-
-**Mental model:**  
-> JS lifts the variable AND gives it a default value.
-
-**Avoid in modern code.**
-
----
 
 ## 🧩 **Summary Table (Color‑coded for your classroom)**
 
